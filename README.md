@@ -1,0 +1,2 @@
+1.CD,2D
+3.首先在对比新老节点之前获取data?.hook里prepatch，调用prepatch函数，然后对比新老节点的DOM元素和子节点如果不相等执行update。第二步判读节点是否有text属性，(1)如果有且不等于老节点的text属性则更新text，如果老节点有children，移除老节点children的DOM元素并设置新节点对应DOM元素的textContent,(2)新老节点都有children，且不等，调用updateChidren(),对比子节点，并更新差异，(3)只有新节点有children属性，老节点有text属性
